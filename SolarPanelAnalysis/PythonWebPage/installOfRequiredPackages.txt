@@ -1,0 +1,206 @@
+PS C:\Users\tech\Documents\PythonWebPage> python --version
+Python 3.10.6
+Collecting pyarrow
+  Downloading pyarrow-17.0.0-cp310-cp310-win_amd64.whl (25.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 25.1/25.1 MB 3.6 MB/s eta 0:00:00
+Collecting numpy>=1.16.6
+  Downloading numpy-2.1.2-cp310-cp310-win_amd64.whl (12.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 3.5 MB/s eta 0:00:00
+Installing collected packages: numpy, pyarrow
+Successfully installed numpy-2.1.2 pyarrow-17.0.0
+
+[notice] A new release of pip available: 22.2.1 -> 24.2
+PS C:\Users\tech\Documents\PythonWebPage> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (22.2.1)
+  Downloading pip-24.2-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 6.8 MB/s eta 0:00:00
+  Attempting uninstall: pip
+    Found existing installation: pip 22.2.1
+    Uninstalling pip-22.2.1:
+      Successfully uninstalled pip-22.2.1
+Successfully installed pip-24.2
+PS C:\Users\tech\Documents\PythonWebPage> pip install pyarrow
+Requirement already satisfied: pyarrow in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (17.0.0)
+Requirement already satisfied: numpy>=1.16.6 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from pyarrow) (2.1.2)
+PS C:\Users\tech\Documents\PythonWebPage> pip install stremlit
+ERROR: Could not find a version that satisfies the requirement stremlit (from versions: none)
+ERROR: No matching distribution found for stremlit
+PS C:\Users\tech\Documents\PythonWebPage> pip install streamlit
+Collecting streamlit
+  Using cached streamlit-1.39.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting altair<6,>=4.0 (from streamlit)
+  Using cached altair-5.4.1-py3-none-any.whl.metadata (9.4 kB)
+Collecting blinker<2,>=1.0.0 (from streamlit)
+  Using cached blinker-1.8.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting cachetools<6,>=4.0 (from streamlit)
+  Using cached cachetools-5.5.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting click<9,>=7.0 (from streamlit)
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Requirement already satisfied: numpy<3,>=1.20 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from streamlit) (2.1.2)
+Collecting packaging<25,>=20 (from streamlit)
+  Using cached packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+Collecting pandas<3,>=1.4.0 (from streamlit)
+  Downloading pandas-2.2.3-cp310-cp310-win_amd64.whl.metadata (19 kB)
+Collecting pillow<11,>=7.1.0 (from streamlit)
+  Downloading pillow-10.4.0-cp310-cp310-win_amd64.whl.metadata (9.3 kB)
+Collecting protobuf<6,>=3.20 (from streamlit)
+  Using cached protobuf-5.28.3-cp310-abi3-win_amd64.whl.metadata (592 bytes)
+Requirement already satisfied: pyarrow>=7.0 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from streamlit) (17.0.0)
+Collecting requests<3,>=2.27 (from streamlit)
+  Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting rich<14,>=10.14.0 (from streamlit)
+  Using cached rich-13.9.3-py3-none-any.whl.metadata (18 kB)
+Collecting tenacity<10,>=8.1.0 (from streamlit)
+  Using cached tenacity-9.0.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting toml<2,>=0.10.1 (from streamlit)
+  Using cached toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting typing-extensions<5,>=4.3.0 (from streamlit)
+  Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit)
+  Using cached GitPython-3.1.43-py3-none-any.whl.metadata (13 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit)
+  Using cached pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting tornado<7,>=6.0.3 (from streamlit)
+  Using cached tornado-6.4.1-cp38-abi3-win_amd64.whl.metadata (2.6 kB)
+Collecting watchdog<6,>=2.1.5 (from streamlit)
+  Using cached watchdog-5.0.3-py3-none-win_amd64.whl.metadata (41 kB)
+Collecting jinja2 (from altair<6,>=4.0->streamlit)
+  Using cached jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting jsonschema>=3.0 (from altair<6,>=4.0->streamlit)
+  Using cached jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting narwhals>=1.5.2 (from altair<6,>=4.0->streamlit)
+  Using cached narwhals-1.10.0-py3-none-any.whl.metadata (7.0 kB)
+Collecting colorama (from click<9,>=7.0->streamlit)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit)
+  Using cached gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+Collecting python-dateutil>=2.8.2 (from pandas<3,>=1.4.0->streamlit)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas<3,>=1.4.0->streamlit)
+  Using cached pytz-2024.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas<3,>=1.4.0->streamlit)
+  Using cached tzdata-2024.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting charset-normalizer<4,>=2 (from requests<3,>=2.27->streamlit)
+  Downloading charset_normalizer-3.4.0-cp310-cp310-win_amd64.whl.metadata (34 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.27->streamlit)
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3,>=2.27->streamlit)
+  Using cached urllib3-2.2.3-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests<3,>=2.27->streamlit)
+  Using cached certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
+Collecting markdown-it-py>=2.2.0 (from rich<14,>=10.14.0->streamlit)
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich<14,>=10.14.0->streamlit)
+  Using cached pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit)
+  Using cached smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->altair<6,>=4.0->streamlit)
+  Downloading MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl.metadata (4.1 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair<6,>=4.0->streamlit)
+  Using cached attrs-24.2.0-py3-none-any.whl.metadata (11 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair<6,>=4.0->streamlit)
+  Using cached jsonschema_specifications-2024.10.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair<6,>=4.0->streamlit)
+  Using cached referencing-0.35.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=3.0->altair<6,>=4.0->streamlit)
+  Downloading rpds_py-0.20.0-cp310-none-win_amd64.whl.metadata (4.2 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<14,>=10.14.0->streamlit)
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas<3,>=1.4.0->streamlit)
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Using cached streamlit-1.39.0-py2.py3-none-any.whl (8.7 MB)
+Using cached altair-5.4.1-py3-none-any.whl (658 kB)
+Using cached blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Using cached cachetools-5.5.0-py3-none-any.whl (9.5 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached GitPython-3.1.43-py3-none-any.whl (207 kB)
+Using cached packaging-24.1-py3-none-any.whl (53 kB)
+Downloading pandas-2.2.3-cp310-cp310-win_amd64.whl (11.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 3.1 MB/s eta 0:00:00
+Downloading pillow-10.4.0-cp310-cp310-win_amd64.whl (2.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 4.7 MB/s eta 0:00:00
+Using cached protobuf-5.28.3-cp310-abi3-win_amd64.whl (431 kB)
+Using cached pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+Using cached rich-13.9.3-py3-none-any.whl (242 kB)
+Using cached tenacity-9.0.0-py3-none-any.whl (28 kB)
+Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Using cached tornado-6.4.1-cp38-abi3-win_amd64.whl (438 kB)
+Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+Using cached watchdog-5.0.3-py3-none-win_amd64.whl (79 kB)
+Using cached certifi-2024.8.30-py3-none-any.whl (167 kB)
+Downloading charset_normalizer-3.4.0-cp310-cp310-win_amd64.whl (102 kB)
+Using cached gitdb-4.0.11-py3-none-any.whl (62 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached jinja2-3.1.4-py3-none-any.whl (133 kB)
+Using cached jsonschema-4.23.0-py3-none-any.whl (88 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached narwhals-1.10.0-py3-none-any.whl (193 kB)
+Using cached pygments-2.18.0-py3-none-any.whl (1.2 MB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached pytz-2024.2-py2.py3-none-any.whl (508 kB)
+Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+Using cached urllib3-2.2.3-py3-none-any.whl (126 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached attrs-24.2.0-py3-none-any.whl (63 kB)
+Using cached jsonschema_specifications-2024.10.1-py3-none-any.whl (18 kB)
+Downloading MarkupSafe-3.0.2-cp310-cp310-win_amd64.whl (15 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Using cached referencing-0.35.1-py3-none-any.whl (26 kB)
+Downloading rpds_py-0.20.0-cp310-none-win_amd64.whl (213 kB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached smmap-5.0.1-py3-none-any.whl (24 kB)
+Installing collected packages: pytz, watchdog, urllib3, tzdata, typing-extensions, tornado, toml, tenacity, smmap, six, rpds-py, pygments, protobuf, pillow, packaging, narwhals, mdurl, MarkupSafe, idna, colorama, charset-normalizer, certifi, cachetools, blinker, attrs, requests, referencing, python-dateutil, markdown-it-py, jinja2, gitdb, click, rich, pydeck, pandas, jsonschema-specifications, gitpython, jsonschema, altair, streamlit
+Successfully installed MarkupSafe-3.0.2 altair-5.4.1 attrs-24.2.0 blinker-1.8.2 cachetools-5.5.0 certifi-2024.8.30 charset-normalizer-3.4.0 click-8.1.7 colorama-0.4.6 gitdb-4.0.11 gitpython-3.1.43 idna-3.10 jinja2-3.1.4 jsonschema-4.23.0 jsonschema-specifications-2024.10.1 markdown-it-py-3.0.0 mdurl-0.1.2 narwhals-1.10.0 packaging-24.1 pandas-2.2.3 pillow-10.4.0 protobuf-5.28.3 pydeck-0.9.1 pygments-2.18.0 python-dateutil-2.9.0.post0 pytz-2024.2 referencing-0.35.1 requests-2.32.3 rich-13.9.3 rpds-py-0.20.0 six-1.16.0 smmap-5.0.1 streamlit-1.39.0 tenacity-9.0.0 toml-0.10.2 tornado-6.4.1 typing-extensions-4.12.2 tzdata-2024.2 urllib3-2.2.3 watchdog-5.0.3
+PS C:\Users\tech\Documents\PythonWebPage> pip install yfinance
+Collecting yfinance
+  Using cached yfinance-0.2.46-py2.py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: pandas>=1.3.0 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from yfinance) (2.2.3)
+Requirement already satisfied: numpy>=1.16.5 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from yfinance) (2.1.2)
+Requirement already satisfied: requests>=2.31 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from yfinance) (2.32.3)
+  Using cached multitasking-0.0.11-py3-none-any.whl.metadata (5.5 kB)
+Collecting lxml>=4.9.1 (from yfinance)
+  Downloading lxml-5.3.0-cp310-cp310-win_amd64.whl.metadata (3.9 kB)
+Collecting platformdirs>=2.0.0 (from yfinance)
+  Using cached platformdirs-4.3.6-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: pytz>=2022.5 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from yfinance) (2024.2)                                                     10\lib\site-packages (from yfinance) (2024.2)
+Collecting frozendict>=2.3.4 (from yfinance)
+  Downloading frozendict-2.4.6-cp310-cp310-win_amd64.whl.metadata (23 kB)
+Collecting peewee>=3.16.2 (from yfinance)
+  Using cached peewee-3.17.7.tar.gz (939 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting beautifulsoup4>=4.11.1 (from yfinance)
+  Using cached beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting html5lib>=1.1 (from yfinance)
+  Using cached html5lib-1.1-py2.py3-none-any.whl.metadata (16 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4>=4.11.1->yfinance)
+  Using cached soupsieve-2.6-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: six>=1.9 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from html5lib>=1.1->yfinance) (1.16.0)
+Collecting webencodings (from html5lib>=1.1->yfinance)
+  Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from pandas>=1.3.0->yfinance) (2.9.0.post0)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from pandas>=1.3.0->yfinance) (2024.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from requests>=2.31->yfinance) (3.4.0)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from requests>=2.31->yfinance) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from requests>=2.31->yfinance) (2.2.3)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\tech\appdata\local\programs\python\python310\lib\site-packages (from requests>=2.31->yfinance) (2024.8.30)
+Using cached yfinance-0.2.46-py2.py3-none-any.whl (100 kB)
+Using cached beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+Downloading frozendict-2.4.6-cp310-cp310-win_amd64.whl (37 kB)
+Using cached html5lib-1.1-py2.py3-none-any.whl (112 kB)
+Downloading lxml-5.3.0-cp310-cp310-win_amd64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 4.8 MB/s eta 0:00:00
+Using cached multitasking-0.0.11-py3-none-any.whl (8.5 kB)
+Using cached platformdirs-4.3.6-py3-none-any.whl (18 kB)
+Using cached soupsieve-2.6-py3-none-any.whl (36 kB)
+Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+Building wheels for collected packages: peewee
+  Building wheel for peewee (pyproject.toml) ... done
+  Created wheel for peewee: filename=peewee-3.17.7-py3-none-any.whl size=138951 sha256=936a97fd6b4893eeb2c6b0dd7b33576529dba573fa099161909cb4943bd2ae0b
+  Stored in directory: c:\users\tech\appdata\local\pip\cache\wheels\8d\0e\f8\48eb93a200fca4c502d7590613616fa4d2c9533f7308f9e28a
+Successfully built peewee
+Installing collected packages: webencodings, peewee, multitasking, soupsieve, platformdirs, lxml, 
+html5lib, frozendict, beautifulsoup4, yfinance
+Successfully installed beautifulsoup4-4.12.3 frozendict-2.4.6 html5lib-1.1 lxml-5.3.0 multitasking-0.0.11 peewee-3.17.7 platformdirs-4.3.6 soupsieve-2.6 webencodings-0.5.1 yfinance-0.2.46
