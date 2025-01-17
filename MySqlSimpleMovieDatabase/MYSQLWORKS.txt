@@ -1,0 +1,196 @@
+Enter password: ******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 8.0.40 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE TABLE movies (
+    ->     Poster_Link VARCHAR(2083),
+    ->     Series_Title VARCHAR(255),
+    ->     Released_Year INT,
+    ->     Certificate VARCHAR(50),
+    ->     Runtime VARCHAR(50),
+    ->     Genre VARCHAR(255),
+    ->     IMDB_Rating DECIMAL(3, 1),
+    ->     Overview TEXT,
+    ->     Meta_score INT,
+    ->     Director VARCHAR(255),
+    ->     Star1 VARCHAR(255),
+    ->     Star2 VARCHAR(255),
+    ->     Star3 VARCHAR(255),
+    ->     Star4 VARCHAR(255),
+    ->     No_of_Votes INT,
+    ->     Gross BIGINT
+    -> );
+ERROR 1046 (3D000): No database selected
+mysql> CREATE TABLE movies ( Poster_Link VARCHAR(2083), Series_Title VARCHAR(255), Released_Year INT, Certificate VARCHAR(50), Runtime VARCHAR(50), Genre VARCHAR(255), IMDB_Rating DECIMAL(3, 1), Overview TEXT, Meta_score INT, Director VARCHAR(255), Star1 VARCHAR(255), Star2 VARCHAR(255), Star3 VARCHAR(255), Star4 VARCHAR(255), No_of_Votes INT, Gross BIGINT );
+ERROR 1046 (3D000): No database selected
+mysql> USE movie_database;
+ERROR 1049 (42000): Unknown database 'movie_database'
+mysql> CREATE DATABASE movie_database;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> CREATE TABLE movies ( Poster_Link VARCHAR(2083), Series_Title VARCHAR(255), Released_Year INT, Certificate VARCHAR(50), Runtime VARCHAR(50), Genre VARCHAR(255), IMDB_Rating DECIMAL(3, 1), Overview TEXT, Meta_score INT, Director VARCHAR(255), Star1 VARCHAR(255), Star2 VARCHAR(255), Star3 VARCHAR(255), Star4 VARCHAR(255), No_of_Votes INT, Gross BIGINT );
+ERROR 1046 (3D000): No database selected
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| movie_database     |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.01 sec)
+
+mysql> USE movie_database
+Database changed
+mysql> SELECT DATABASE();
++----------------+
+| DATABASE()     |
++----------------+
+| movie_database |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> LOAD DATA INFILE 'C:/Users/tech/Downloads/imdb_top_1000.csv'
+    -> INTO TABLE movies
+    -> FIELDS TERMINATED BY ','
+    -> ENCLOSED BY '"'
+    -> LINES TERMINATED BY '\n'
+    -> IGNORE 1 ROWS;
+ERROR 1146 (42S02): Table 'movie_database.movies' doesn't exist
+mysql> LOAD DATA INFILE 'C:/Users/tech/Downloads/imdb_top_1000.csv'
+    -> USE movie_database
+    ->
+    ->
+    ->
+    -> USE movie_database
+    -> INTO TABLE movies
+    -> ENCLOSED BY '"'
+    -> LINES TERMINATED BY '\n'
+    -> IGNORE 1 ROWS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'USE movie_database
+
+
+
+USE movie_database
+INTO TABLE movies
+ENCLOSED BY '"'
+LINES' at line 2
+mysql> SHOW TABLES;
+Empty set (0.01 sec)
+
+mysql> CREATE TABLE movies (
+    ->     Poster_Link VARCHAR(2083),
+    ->     Series_Title VARCHAR(255),
+    ->     Released_Year INT,
+    ->     Certificate VARCHAR(50),
+    ->     Runtime VARCHAR(50),
+    ->     Genre VARCHAR(255),
+    ->     IMDB_Rating DECIMAL(3, 1),
+    ->     Overview TEXT,
+    ->     Meta_score INT,
+    ->     Director VARCHAR(255),
+    ->     Star1 VARCHAR(255),
+    ->     Star2 VARCHAR(255),
+    ->     Star3 VARCHAR(255),
+    ->     Star4 VARCHAR(255),
+    ->     No_of_Votes INT,
+    ->     Gross BIGINT
+    -> );
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SHOW TABLES;
++--------------------------+
+| Tables_in_movie_database |
++--------------------------+
+| movies                   |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> LOAD DATA INFILE 'C:/Users/tech/Downloads/imdb_top_1000.csv'
+    -> INTO TABLE movies
+    -> FIELDS TERMINATED BY ','
+    -> ENCLOSED BY '"'
+    -> LINES TERMINATED BY '\n'
+    -> IGNORE 1 ROWS;
+ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| movie_database     |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> SHOW TABLES;
++--------------------------+
+| Tables_in_movie_database |
++--------------------------+
+| movies                   |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SHOW VARIABLES LIKE 'secure_file_priv';
++------------------+------------------------------------------------+
+| Variable_name    | Value                                          |
++------------------+------------------------------------------------+
+| secure_file_priv | C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\ |
++------------------+------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> LOAD DATA INFILE 'C:/Users/tech/Downloads/imdb_top_1000.csv'
+    -> INTO TABLE movies
+    -> FIELDS TERMINATED BY ','
+    -> ENCLOSED BY '"'
+    -> LINES TERMINATED BY '\n'
+    -> IGNORE 1 ROWS;
+ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+mysql> mysql --local-infile -u root -p
+    -> LOAD DATA INFILE 'C:/Users/tech/Downloads/imdb_top_1000.csv'
+    -> INTO TABLE movies
+    -> FIELDS TERMINATED BY ','
+    -> ENCLOSED BY '"'
+    -> LINES TERMINATED BY '\n'
+    -> IGNORE 1 ROWS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mysql --local-infile -u root -p
+LOAD DATA INFILE 'C:/Users/tech/Downloads/imdb_t' at line 1
+mysql> mysql --local-infile -u root -p
+    -> LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/imdb_top_1000.csv'
+    -> INTO TABLE movies
+    -> FIELDS TERMINATED BY ','
+    -> ENCLOSED BY '"'
+    -> LINES TERMINATED BY '\n'
+    -> IGNORE 1 ROWS;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mysql --local-infile -u root -p
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Ser' at line 1
+mysql> SELECT * FROM movies LIMIT 10;
+Empty set (0.00 sec)
+
+mysql> USE movie_database;
+Database changed
+mysql> LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/imdb_top_1000.csv'
+    -> INTO TABLE movies
+    -> FIELDS TERMINATED BY ','
+    -> ENCLOSED BY '"'
+    -> LINES TERMINATED BY '\n'
+    -> IGNORE 1 ROWS;
+ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+mysql>
